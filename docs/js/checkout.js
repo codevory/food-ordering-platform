@@ -217,6 +217,6 @@ updateTotals();
 
 const payBtn = document.querySelector('.pay-now-btn')
 payBtn.addEventListener('click',function(){
-window.location.href = 'http://127.0.0.1:5500/projects/java/payment.html?'
+window.location.href = 'payment.html'
 })
  })
