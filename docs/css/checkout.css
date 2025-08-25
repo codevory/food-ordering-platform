@@ -1,0 +1,228 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #0a4d68;
+    --secondary-color: #05bfdb;
+    --background-color: #f0f8ff; /* A very light, airy blue */
+    --card-background: #ffffff;
+    --text-color: #333;
+    --subtle-text-color: #777;
+    --border-color: #e0e0e0;
+    --success-color: #28a745;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+a{
+    text-decoration:none;
+    color:white;
+}
+/* --- Checkout Container (The Card) --- */
+.checkout-container {
+    width: 100%;
+    max-width: 550px;
+    background: var(--card-background);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 87, 128, 0.15);
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Creates space between sections */
+    transition: transform 0.3s ease;
+}
+
+.checkout-container:hover {
+    transform: translateY(-5px);
+}
+
+/* --- Header Section --- */
+.checkout-header {
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.checkout-header h1 {
+    font-weight: 600;
+    font-size: 1.75rem;
+    color: var(--primary-color);
+}
+
+/* --- Body / Item List Section --- */
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--subtle-text-color);
+    margin-bottom: 15px;
+}
+
+.item-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border-color);
+    font-size: 1rem;
+}
+
+.item-list li:last-child {
+    border-bottom: none;
+}
+
+.item-name {
+    font-weight: 500;
+}
+
+.item-price {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* --- Summary Section --- */
+.checkout-summary {
+    border-top: 2px solid var(--border-color);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    color: var(--subtle-text-color);
+}
+
+.summary-line.total {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.summary-line.total span:last-child {
+    color: var(--primary-color);
+}
+
+/* --- Call to Action Button --- */
+.pay-now-btn {
+    background: linear-gradient(90deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(5, 191, 219, 0.3);
+}
+
+.pay-now-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(5, 191, 219, 0.4);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 600px) {
+    .checkout-container {
+        padding: 20px;
+    }
+
+    .checkout-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .summary-line.total {
+        font-size: 1.2rem;
+    }
+
+    .pay-now-btn {
+        padding: 15px;
+    }
+}
+
+
+/* coupon */
+
+#coupon-cont{
+    display:flex;
+    gap:20px;
+}
+
+#couponInput{
+    width:170px;
+    height:34px;
+    border-radius:8px;
+    position:relative;
+    left:100px;
+    padding:10px;
+}
+
+#apply-coupon-btn{
+    position:relative;
+    left:120px;
+    width:70px;
+    height:34px;
+    border-radius:8px;
+    background-color:#0d5571;
+}
+
+#coupon-message{
+    font-size:13px;
+    color:gray;
+}
+
+.btn-inp{
+    width:40px;
+    height:28px;
+    padding:4px;
+    border-radius:6px;
+    text-align:center;
+}
+
+.left-btn{
+    width:30px;
+    height:25px;
+      border:none;
+    outline:none;
+    font-weight:800;
+     border-radius:6px;
+}
+
+.right-btn{
+    width:30px;
+    height:25px;
+    border:none;
+    outline:none;
+    font-weight:800;
+     border-radius:6px;
+}
+
+.buttons{
+    margin-left:90px;
+    background-color:#ffffff;
+    border:2px solid rgb(0, 0, 0);
+    border-radius:8px;
+    color:white;
+}

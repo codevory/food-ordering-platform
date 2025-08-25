@@ -1,0 +1,479 @@
+/* =================================
+   General Body & Base Styles
+   ================================= */
+body {
+    background-color: #dadae0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* CRITICAL: Remove default body margin */
+    padding: 0;
+    /* CRITICAL: Remove default body padding */
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1621a2;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+} */
+
+/* =================================
+   Main Layout Grid
+   This is the most important change.
+   ================================= */
+.main-container {
+    display: grid;
+    /* Defines two columns: one for the sidebar, one for the content */
+    grid-template-columns: auto 1fr;
+    height: 100vh;
+    /* Make the container the full height of the viewport */
+}
+
+/* =================================
+   Sidebar (Header & Navigation Menu)
+   ================================= */
+.header {
+    /* Sizing and Position */
+    width: 0;
+    /* Start collapsed */
+    height: 100vh;
+    /* Fill the full height of the grid row */
+
+    /* Flexbox for internal alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    /* Appearance */
+    background-color: #1d659c;
+    color: white;
+    padding: 20px 0;
+    /* Adjust padding when collapsed */
+    border-radius: 0;
+    /* The sidebar is at the edge, no radius needed */
+
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
+    /* Smooth transition */
+}
+
+/* Style for when the sidebar is active/open */
+.header.is-active {
+    width: 220px;
+    /* Width when open */
+    padding: 20px 10px;
+    /* Restore padding */
+}
+
+
+.header h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 10px;
+    text-align: center;
+    white-space: nowrap;
+    /* Prevent title from wrapping */
+}
+
+.header ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header ul li a {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+    /* Prevent menu text from wrapping */
+}
+
+.header ul li a i {
+    font-size: 1.4rem;
+    margin-right: 20px;
+    width: 25px;
+    text-align: center;
+}
+
+.header ul li:hover a {
+    background-color: #bb8298;
+    transform: scale(1.05);
+}
+
+/* =================================
+   Main Content Area
+   This is the new scrollable wrapper.
+   ================================= */
+.content-area {
+    padding: 20px;
+    overflow-y: auto;
+    /* Make ONLY this area scrollable */
+    height: 100vh;
+    /* Match the viewport height */
+    box-sizing: border-box;
+    /* Include padding in height calculation */
+}
+
+/* Top bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3767df;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.top-bar li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.top-bar img.logo {
+    width: 100px;
+    height: auto;
+}
+
+.fa-bars {
+    font-size: 1.8rem;
+    background-color: transparent;
+    padding: 0.5rem;
+    color: #000000;
+    cursor: pointer;
+    border: none;
+}
+
+.fa-cart-shopping {
+    font-size: 2rem;
+    color: #040404;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: relative;
+    font-size: 1.25rem;
+    top: 10px;
+    right: 40px;
+}
+
+#cart-numb {
+    position: absolute;
+    top: -13px;
+    right: 7px;
+    color: #eee8e8;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/*  Price section */
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1621a2;
+    margin-bottom: 2px;
+}
+
+/* Add to cart btn */
+.add-to-cart {
+    position: relative;
+    left: 28%;
+    margin-block: 8px;
+    width: 140px;
+    height: 40px;
+    background-color: #1621a2;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* The main container */
+.quantity-selector {
+    width: 110px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    /* Vertically align items in the center */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* Rounded corners for the whole container */
+    overflow: hidden;
+    /* Ensures children don't bleed outside the rounded corners */
+    position: relative;
+    left: 32%;
+}
+
+/* Style for both buttons */
+.quantity-selector button {
+    background-color: #dedbdb;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 45px;
+}
+
+.quantity-selector button:hover {
+    background-color: #e0e0e0;
+}
+
+/* The input field in the middle */
+.quantity-selector .quantity-input {
+    width: 40px;
+    /* Give it a fixed width */
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    border-left: 1px solid #ccc;
+    /* Separator line */
+    border-right: 1px solid #ccc;
+    /* Separator line */
+    padding: 10px 0;
+}
+
+/* Removes the default focus outline which can look ugly */
+.quantity-selector .quantity-input:focus {
+    outline: none;
+}
+
+
+
+
+#search {
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    width: 400px;
+    /* Adjust as needed */
+}
+
+#search-btn {
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #1621a2;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Menu category */
+#menu-category {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    flex-wrap: wrap;
+    /* overflow: hidden; */
+    margin-block: 50px;
+}
+
+.menu-item {
+    width: 140px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block: 10px;
+    text-align: center;
+    border: 2px solid #00020a;
+    background-color: #674bc084;
+    padding: 5px;
+    border-radius: 14px;
+    color: #1d659c;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    /* Smooth transition for hover */
+    cursor: pointer;
+    /* Show pointer cursor */
+}
+
+/* Hover effect for menu items */
+.menu-item:hover {
+    background-color: #e8f4fd;
+    /* Light blue background */
+    border-color: #007bff;
+    /* Blue border */
+    transform: translateY(-2px);
+    /* Slight lift */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    /* Blue shadow */
+    color: #0056b3;
+    /* Darker blue text */
+}
+
+.menu-item img {
+    color: #0091ff;
+    width: 30px;
+    height: 30px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Hover effect already defined above for .menu-item */
+
+
+
+
+
+/* Popular items */
+
+#pop-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2a8b10;
+    height: 280px;
+    border-radius: 12px;
+    ;
+    padding: 10px;
+    margin-block: 15px;
+}
+
+#pop-container h2 {
+    /* text-decoration: double; */
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1..5rem;
+    color: #ffffff;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.items:hover {
+    transform: scale(1.07);
+    background-color: #df9d9d;
+    transition: all 0.3s ease-in;
+}
+
+
+
+
+.popular-items {
+    width: 80%;
+    height: 100%;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    background-color: #2a8b10;
+    gap: 20px;
+}
+
+.items {
+    width: 130px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 6px;
+    border: 2px solid #1621a2;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.items h3 {
+    border: 2px solid green;
+    padding: 5px;
+    border-radius: 10px;
+    color: #000000;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.items img {
+    max-width: 100px;
+    height: 120px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Main Content Food Cards */
+#main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+}
+
+.card p {
+    margin: 0;
+    color: #555;
+}
+
+.add-to-cart:hover {
+    transform: scale(1.07);
+    background-color: #64198c;
+    transition: all 0.5s ease-in-out;
+}
+
+/* .logo img{
+    width:30px;
+    height:auto;
+    object-fit: cover;
+} */
