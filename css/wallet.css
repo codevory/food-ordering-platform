@@ -1,0 +1,141 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Styles */
+body {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Wallet Container */
+.wallet-container {
+  background: #fff;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  padding: 25px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Main Heading */
+.wallet-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Balance Message (Persistent Info) */
+.balance-message {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Wallet Balance */
+.wallet-balance {
+  background: #f3f8ff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid #e0e8ff;
+}
+
+.wallet-balance p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.wallet-balance span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Input Field */
+#amount {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: border 0.2s ease;
+}
+
+#amount:focus {
+  outline: none;
+  border: 1px solid #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Add Funds Button */
+.add-funds {
+  width: 100%;
+  background: linear-gradient(90deg, #007bff, #00bfff);
+  border: none;
+  color: white;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.add-funds:hover {
+  background: linear-gradient(90deg, #0056b3, #0099cc);
+  transform: translateY(-1px);
+}
+
+.add-funds:active {
+  transform: scale(0.98);
+}
+
+/* Transaction History */
+.transaction-history {
+  margin-top: 25px;
+}
+
+.transaction-history h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.transaction-history ul {
+  list-style: none;
+}
+
+.transaction-history li {
+  padding: 10px;
+  background: #f9f9f9;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #333;
+  border-left: 5px solid #007bff;
+  transition: background 0.2s ease;
+}
+
+.transaction-history li:hover {
+  background: #f1f7ff;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
