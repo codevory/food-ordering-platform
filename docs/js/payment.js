@@ -101,7 +101,7 @@ localStorage.removeItem('cartItems')
 localStorage.removeItem('discount')
 console.log(`order saved for ${newOrder.Tracking_Id}`)
 setTimeout(function(){
-window.location.href = "http://127.0.0.1:5500/food-ordering-platform/docs/track.html"
+window.location.href = "track.html"
 },2000)
 }
 
@@ -118,7 +118,7 @@ window.location.href = "http://127.0.0.1:5500/food-ordering-platform/docs/track.
     // 3. Display low balance message
     orderMessage.textContent = `Low wallet balance.Redirecting to wallet page`;
     setTimeout(function(){
-  window.location.href = "http://127.0.0.1:5500/food-ordering-platform/docs/wallet.html"
+  window.location.href = "wallet.html"
     },3000)
       }
 
