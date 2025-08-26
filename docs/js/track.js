@@ -1,46 +1,78 @@
 let inputId = document.getElementById('track-input')
 let loader = document.querySelector('.loader')
 const btn = document.getElementById('track-btn')
-const orderIdSp = document.getElementById('order-id') 
+const orderIdSp = document.getElementById('order-id')
 const orderAmount = document.getElementById('order-amount')
 const date = document.getElementById('order-date')
 const address = document.getElementById('location-space')
 const items = document.getElementById('items')
 const quantity = document.getElementById('quantity')
 const orderCont = document.getElementById('lower-container')
+const message = document.querySelector('.message')
+const popup = document.querySelector('.pop')
+
+
 
 let info = localStorage.getItem('userOrders')
 let data = JSON.parse(info)
 
 let orderFound = data.find(item => item.Tracking_Id === inputId.value.trim())
-
-
-
-
-btn.addEventListener('click',function(){
-    let orderFound = data.find(order => order.Tracking_Id === inputId.value.trim())
-  loader.classList.remove('hidden')
-  orderCont.classList.add('hidden')
-    setTimeout(() => {
+orderCont.classList.add('hidden')
+message.classList.add('hidden')
+popup.classList.add('hidden')
 loader.classList.add('hidden')
-orderCont.classList.remove('hidden')
-  if(orderFound){
-        console.log(orderFound)
-        displayOrder(orderFound)
+
+btn.addEventListener('click', function () {
+    let orderFound = data.find(item => item.Tracking_Id === inputId.value.trim())
+
+  setTimeout(function() {
+    if (inputId.value.trim() ==="") {
+        loader.classList.add('hidden')
+        popup.classList.remove('hidden')
     }
-    else{
-        console.log('not able to get data')
-    }
-    },1000)
-  
+},2)
+loader.classList.remove('hidden')
+orderCont.classList.add('hidden')
+message.classList.add('hidden')
+popup.classList.remove('hidden')
+
+
+
+    setTimeout(() => {
+        if (orderFound) {
+            console.log(orderFound)
+            displayOrder(orderFound)
+            orderCont.classList.remove('hidden')
+            loader.classList.add('hidden')
+        }
+    }, 700)
+
+    loader.classList.remove('hidden')
+    orderCont.classList.add('hidden')
+    message.classList.add('hidden')
+    popup.classList.add('hidden')
+
+    setTimeout(function () {
+        if (inputId.value.trim() && !orderFound) {
+            loader.classList.add('hidden')
+            message.classList.remove('hidden')
+            console.log(!orderFound)
+        }
+    }, 1000)
+
+loader.classList.remove('hidden')
+orderCont.classList.add('hidden')
+message.classList.add('hidden')
+popup.classList.add('hidden')
+
+
 })
 
-
-function displayOrder(order){
-    const orderdate = new Date(order.order_Date).toLocaleDateString('en-IN',{
-        day:"numeric",
-        month:"long",
-        year:"numeric"
+function displayOrder(order) {
+    const orderdate = new Date(order.order_Date).toLocaleDateString('en-IN', {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
     })
     date.textContent = orderdate
     const Ordaddress = order.address
@@ -48,9 +80,9 @@ function displayOrder(order){
     orderIdSp.textContent = order.orderId
     orderAmount.textContent = `$${order.orderAmount}`
     order.items.forEach(item => {
- items.textContent = item.name
-    quantity.textContent = `Quantity : ${item.quantity}`
+        items.textContent = item.name
+        quantity.textContent = `Quantity : ${item.quantity}`
 
     })
-    
+
 }

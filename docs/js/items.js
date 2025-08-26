@@ -17,4 +17,3 @@ else{
 
 // let data = document.getElementById('data')
 // data.textContent = 29;
-

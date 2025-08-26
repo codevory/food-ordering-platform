@@ -14,7 +14,7 @@
         <h1> Track your Orders</h1>
         <p>Enter your tracking Id below to track your order</p>
         <div id="track-box">
-            <input type="text" id="track-input" placeholder="Eg. ORD1633171618398">
+            <input type="text" id="track-input" placeholder="ORD1633171618398" required>
             <button id="track-btn">Track</button>
         </div>
     </div>
@@ -80,6 +80,15 @@
             <span id="quantity"></span>
         </div>
     </div>
+     <div id="message" class="message hidden">
+            <img src="images/icons/empty-cart.png">
+            <p>Order not found make sure to enter right tracking id either check in your orders section</p>
+        </div>
+     
+            <div id="pop-content" class="pop hidden">
+                <p>Kindly enter your tracking id</p>
+            </div>
+        
     <script src="./js/track.js"></script>
 </body>
 

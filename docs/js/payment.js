@@ -100,6 +100,9 @@ localStorage.setItem('userOrders',JSON.stringify(orders))
 localStorage.removeItem('cartItems')
 localStorage.removeItem('discount')
 console.log(`order saved for ${newOrder.Tracking_Id}`)
+setTimeout(function(){
+window.location.href = "http://127.0.0.1:5500/food-ordering-platform/docs/track.html"
+},2000)
 }
 
 
@@ -108,25 +111,16 @@ console.log(`order saved for ${newOrder.Tracking_Id}`)
     let newBalance = (currentBalance - billAmount).toFixed(2);
     balance.textContent = ` wallet Balance : $${newBalance}`;
     localStorage.setItem('balance',JSON.stringify(balance.textContent.replace('wallet Balance : $','')))
-  //   if(orderMessage.textContent === 'Thank you! Order successfully placed.'){
-  //       setTimeout(function() {
-  // window.location.href = "http://127.0.0.1:5500/projects/html/checkout.html"
-  //       },3000)
-  //   }
-   
-
-
+ 
   }
   
   else {
     // 3. Display low balance message
     orderMessage.textContent = `Low wallet balance.Redirecting to wallet page`;
     setTimeout(function(){
-  window.location.href = "http://127.0.0.1:5500/projects/html/wallet.html"
+  window.location.href = "http://127.0.0.1:5500/food-ordering-platform/docs/wallet.html"
     },3000)
-    
-    // No return needed here, as it's the end of the function logic
-  }
+      }
 
 });
 
