@@ -110,7 +110,7 @@ console.log(`order saved for ${newOrder.Tracking_Id}`)
     localStorage.setItem('balance',JSON.stringify(balance.textContent.replace('wallet Balance : $','')))
   //   if(orderMessage.textContent === 'Thank you! Order successfully placed.'){
   //       setTimeout(function() {
-  // window.location.href = "http://127.0.0.1:5500/projects/html/checkout.html"
+  // window.location.href = "track.html"
   //       },3000)
   //   }
    
@@ -122,7 +122,7 @@ console.log(`order saved for ${newOrder.Tracking_Id}`)
     // 3. Display low balance message
     orderMessage.textContent = `Low wallet balance.Redirecting to wallet page`;
     setTimeout(function(){
-  window.location.href = "http://127.0.0.1:5500/projects/html/wallet.html"
+  window.location.href = "wallet.html"
     },3000)
     
     // No return needed here, as it's the end of the function logic
