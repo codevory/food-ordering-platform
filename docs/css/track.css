@@ -211,6 +211,7 @@ h4{
 #items{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight:500;
+    overflow:hidden;
 }
 #quantity{
     font-size:small;
