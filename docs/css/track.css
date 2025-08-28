@@ -1,3 +1,27 @@
+#head-cont{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, 260px(1fr));
+   
+}
+
+#recent-ord{
+    width:300px;
+    height:auto;
+    background-color:aquamarine;
+    border-radius:12px;
+    margin-top:100px;
+}
+#ord-sp{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    gap:10px;
+}
+
+
+
+
 #upper-container{
     display:flex;
     justify-items:center;
@@ -6,7 +30,7 @@
     background-color:rgb(241, 186, 186);
     width:600px;
     height:auto;
-    margin:4px auto;
+    margin:0 auto;
     border-radius:12px;
     padding:10px;
     box-shadow:0 6px 45px rgb(0, 0, 0,0.16);
