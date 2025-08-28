@@ -10,13 +10,22 @@ const quantity = document.getElementById('quantity')
 const orderCont = document.getElementById('lower-container')
 const message = document.querySelector('.message')
 const popup = document.querySelector('.pop')
-
+let ordHead = document.querySelector('#ord-sp')
+let ordTxt = document.querySelector('.ord-txt')
+let ordSp = document.getElementById('ord-sp')
 
 
 let info = localStorage.getItem('userOrders')
 let data = JSON.parse(info)
+let ids = data.map(item => item.Tracking_Id)
+ordSp.innerHTML = data.map((item,index) => {
+    return `<li> ${item.Tracking_Id}</li>`
+}).join('')
+
 
 let orderFound = data.find(item => item.Tracking_Id === inputId.value.trim())
+
+
 orderCont.classList.add('hidden')
 message.classList.add('hidden')
 popup.classList.add('hidden')
