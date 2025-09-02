@@ -14,22 +14,22 @@ let ordHead = document.querySelector('#ord-sp')
 let ordTxt = document.querySelector('.ord-txt')
 let ordSp = document.getElementById('ord-sp')
 
+orderCont.classList.add('hidden')
+message.classList.add('hidden')
+popup.classList.add('hidden')
+loader.classList.add('hidden')
 
-let info = localStorage.getItem('userOrders')
-let data = JSON.parse(info)
-let ids = data.map(item => item.Tracking_Id)
+let data = JSON.parse(localStorage.getItem('userOrders'))
+// let ids = data.map(item => item.Tracking_Id)
 ordSp.innerHTML = data.map((item,index) => {
-    return `<li> ${item.Tracking_Id}</li>`
+    return `${item.Tracking_Id}` ? `<li> ${item.Tracking_Id}</li>` : []
 }).join('')
 
 
 let orderFound = data.find(item => item.Tracking_Id === inputId.value.trim())
 
 
-orderCont.classList.add('hidden')
-message.classList.add('hidden')
-popup.classList.add('hidden')
-loader.classList.add('hidden')
+
 
 btn.addEventListener('click', function () {
     let orderFound = data.find(item => item.Tracking_Id === inputId.value.trim())
