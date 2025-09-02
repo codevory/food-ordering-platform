@@ -19,10 +19,40 @@ message.classList.add('hidden')
 popup.classList.add('hidden')
 loader.classList.add('hidden')
 
-let data = JSON.parse(localStorage.getItem('userOrders'))
+let retrieved = JSON.parse(localStorage.getItem('userOrders'))
+let data = retrieved ? retrieved : [
+    {
+        "orderId": "1005510958977",
+        "Tracking_Id": "ORD1187280163690",
+        "order_Date": "2025-09-01T15:16:27.995Z",
+        "items": [
+            {
+                "name": [
+                    "Crunchy Nuggets Bite",
+                    "Special Panner Tika",
+                    "Special Naan With Dal"
+                ],
+                "price": [
+                    3.99,
+                    1.99,
+                    4.59
+                ],
+                "quantity": [
+                    1,
+                    1,
+                    1
+                ]
+            }
+        ],
+        "orderAmount": 23.07,
+        "address": "Delhi NCR, ( Old Rajinder Nagar ) UPSC kr raha hu",
+        "status": "Success"
+    }
+]
+
 // let ids = data.map(item => item.Tracking_Id)
 ordSp.innerHTML = data.map((item,index) => {
-    return `${item.Tracking_Id}` ? `<li> ${item.Tracking_Id}</li>` : []
+    return `<li> ${item.Tracking_Id}</li>`
 }).join('')
 
 
