@@ -33,7 +33,7 @@ a{
 /* --- Checkout Container (The Card) --- */
 .checkout-container {
     width: 100%;
-    max-width: 550px;
+    max-width: 600px;
     background: var(--card-background);
     border-radius: 20px;
     box-shadow: 0 15px 40px rgba(0, 87, 128, 0.15);
@@ -73,7 +73,7 @@ a{
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .item-list li {
@@ -95,6 +95,7 @@ a{
 
 .item-price {
     font-weight: 600;
+    font-size:10px;
     color: var(--primary-color);
 }
 
