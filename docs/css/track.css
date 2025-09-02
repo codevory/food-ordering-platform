@@ -1,22 +1,45 @@
+body{
+    margin:5px auto;
+}
+
+
+
+
 #head-cont{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, 260px(1fr));
-   
+    background-color:rgb(255, 255, 255);
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap:150px;
+    margin-top:10px;
+    margin-left:50px;  
 }
 
 #recent-ord{
-    width:300px;
-    height:auto;
-    background-color:aquamarine;
+    width:20%;
+    height:400px;
+    background-color:rgb(255, 255, 255);
     border-radius:12px;
-    margin-top:100px;
+   margin-left:60px;
+   margin-top:10px;
+   padding:5px;
+   flex-shrink:0.1;
+}
+
+#recent-ord h2{
+    text-align:center;
+    font-family:cursive;
 }
 #ord-sp{
     display:flex;
-    justify-content:center;
-    align-items:center;
+    justify-content:flex-start;
     flex-direction:column;
     gap:10px;
+    font-size:1.4rem;
+    font-weight:600;
+    color:coral;
+    font-family:'Courier New', Courier, monospace;
+    list-style:none
 }
 
 
@@ -28,11 +51,10 @@
     align-items:center;
     flex-direction:column;
     background-color:rgb(241, 186, 186);
-    width:600px;
-    height:auto;
-    margin:0 auto;
+    width:650px;
+    height:250px;
     border-radius:12px;
-    padding:10px;
+    padding:3px;
     box-shadow:0 6px 45px rgb(0, 0, 0,0.16);
 }
 
@@ -47,6 +69,7 @@
     border-radius:7px;
     text-align:center;
     font-weight:600;
+    font-size:1.1rem;
 }
 
 #track-btn{
@@ -76,6 +99,7 @@
     align-items:center;
     gap:8px;
     margin-block:30px;
+    margin-left:100px;
 }
 
 .loader-inside{
@@ -113,7 +137,7 @@ transform:translateY(0)
     height:100%;
     background-color:rgb(255, 255, 255);
     padding:15px;
-    margin:20px auto;
+    margin-left:35%;
 }
 #lower-container.hidden{
     display:none;
@@ -124,9 +148,10 @@ transform:translateY(0)
     justify-content:space-between;
     gap:20px;
     padding:20px;
-    background-color: rgb(68, 43, 141);
+    background-color: rgb(6, 82, 98);
     color:white;
     border-radius:7px;
+    margin-bottom:60px;
 }
 
 #header-1{
@@ -240,11 +265,15 @@ h4{
     text-align:center;
 }
 
-#items{
+#items-cont{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight:500;
-    
 }
+#items{
+       font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:500;
+}
+
 #quantity{
     font-size:small;
     color:grey;
@@ -255,7 +284,7 @@ h4{
     height:500px;
     border-radius:12px;
     text-align:center;
-    margin:20px auto;
+    margin-left:40%;
     background-color:rgb(255, 255, 255);
 }
 
@@ -278,8 +307,7 @@ display:none;
   display:flex;
   justify-content:center;
   align-items:center;
-    box-shadow:0 10px 31px rgba(0,0,0,0.2);
-   margin:50px auto;
+   margin-left:40%;
 }
 .pop p{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
