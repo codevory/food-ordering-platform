@@ -11,7 +11,7 @@ Welcome to the Food Ordering Platform! This is a modern, responsive web applicat
 - **Checkout & Payment:** Secure and simple checkout process with wallet and payment options.
 - **Order Tracking:** Track your order status in real-time.
 - **Wallet Integration:** Manage your wallet and view transaction history.
-- **Responsive Design:** Optimized for desktops, tablets, and mobile devices.
+- **Responsive Design:** Optimized for desktops, tablets, coming soon for mobile devices.
 
 ---
 
