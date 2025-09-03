@@ -893,7 +893,7 @@ font-size:16px;
 @media(max-width:768px){#li1{
     max-width:260px;
     width:100%;
-    gap:7px;
+    gap:5px;
     background-color:chocolate;
 }}
 @media(max-width:768px){#search{
@@ -901,3 +901,4 @@ font-size:16px;
     padding:5px;
     border-radius:10px;
 }}
+
