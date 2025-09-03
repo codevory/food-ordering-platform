@@ -798,3 +798,106 @@ font-size:1.1rem;
     height:auto;
 }
 
+/* Mobile responsiveness Optimization 786px */
+@media(max-width:768px){body{
+    max-width:725px;
+    width:100%;
+    margin:0 auto;
+}}
+@media(max-width:768px){.logo img {
+    width:60px;
+    height:auto;
+    object-fit:cover;
+    margin-left:6px;
+    background-color:#007bff;
+}}
+
+@media(max-width:768px) {#header{
+    height:70px;
+    padding:2px;
+}}
+
+@media(max-width:768px){#nav-list ul{
+    gap:20px;
+    font-size:16px;
+    font-weight:500;
+}}
+
+@media(max-width:768px){#nav-list ul img{
+width:17px;
+   height:auto;
+   object-fit:cover;
+    position:relative;
+    top:5px;
+    right:2px;
+}}
+
+@media(max-width:768px){.location-cont{
+    width:270px;
+    height:80px;
+}}
+@media(max-width:768px){.location-cont img{
+    width:13px;
+
+}}
+@media(max-width:768px){#loc-box{
+    position:relative;
+    right:75px;
+    max-width:120px;
+    width:100%;
+    height:auto;
+}}
+
+@media(max-width:768px){#p1{
+    position:relative;
+    top:15px;
+    left:5px;
+    font-size:20px;
+    clear:both;
+}}
+@media(max-width:768px){#big{
+    font-size:18px;
+    position:relative;
+    /* top:20px; */
+}}
+@media(max-width:768px){#pin-btn img{
+    position:relative;
+    left:30px;
+    top:1px;
+    width:14px;
+    
+}}
+@media(max-width:768px){#locat-space{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width:270px;
+    width:180px;
+    font-size:11px;
+    top:7px;
+    left:15px;
+}}
+@media(max-width:768px){#pin{
+    font-size:10px;
+}}
+
+@media(max-width:768px){.location-cont img{
+    right:150px;
+    top:63px;
+}}
+@media(max-width:768px){#signup-form h2{
+font-size:16px;
+}}
+@media(max-width:768px){#open-modal-btn{
+    font-size:16px;
+    font-weight:500;
+}}
+@media(max-width:768px){#li1{
+    max-width:260px;
+    width:100%;
+    gap:7px;
+    background-color:chocolate;
+}}
+@media(max-width:768px){#search{
+    width:150px;
+    padding:5px;
+    border-radius:10px;
+}}
