@@ -9,10 +9,37 @@
 </head>
 
 <body>
-    <!-- Header Menu -->
+    <!-- Header -->
     <header id="header">
-        <div id="hamberg-menu" class="hidden">
-            <ul id="menu-moble">
+        <div id="small-menu">
+            <!-- menu button -->
+              <button class="menu-btn closed"><img src="images/menu_9548704.png"></button>
+            <!-- logo -->
+            <div class="logo">
+            <img src="images/red-logo.png" alt="Delicious Bite Logo">
+            </div>
+
+          <!-- <div class="location-cont"> -->
+            <div id="loc-mob">
+                <h3 id="p1-mob"><big id="big-mob">Deliver</big><small>to</small></h3>
+                <span id="locat-space">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</span>
+            </div>
+            <div id="loc-box-mob">
+                <input type="text" id="pin" placeholder="Area Pin">
+                <img src="images/icons/location.svg">
+            </div>
+           <span id="loc-img-mob"> <img src="images/icons/pin.svg"></span>
+        <!-- </div> -->
+        <nav id="nav-list-mob">
+           
+                <div id="li1-mob"><input type="search" id="search" placeholder="Search Here"
+                        aria-label="Search restaurants"> <span id="search-count"
+                        ></span><span id="srch-btn-mob"><img
+                            src="images/icons/search.svg"></span>
+                 </div>
+        
+
+            <ul id="menu-mobile-mob" class="hidden">
                 <li><a href="about.html"><img src="images/icons/phone.svg"> Help</a></li>
                 <li><a href="menu.html"><img src="images/icons/offers.svg"> Offers</a></li>
                 <li class="login-btn"><button id="open-modal-btn"><img src="images/icons/user.svg">login</button>
@@ -20,7 +47,7 @@
                     <div id="modal-overlay" class="modal-overlay">
                         <div class="modal-content">
                             <span class="close-btn">&times;</span>
-                            <form id="signin-form" class="form1 form-panel ">
+                            <form id="signin-form-mob" class="form1 form-panel ">
                                 <h2>Sign in</h2>
                                 <label for="username">Username:</label>
                                 <input type="text" id="username" name="username" autocomplete="given-name" required>
@@ -28,13 +55,13 @@
                                 <label for="password">Password:</label>
                                 <input type="password" id="password" name="password" autocomplete="off" required>
         
-                                <button onclick="login()" type="submit" id="loginBtn">Submit</button>
-                                <p class="toggle-link" id="registration-link">Don't have account ? <a href="#registration-form"
+                                <button onclick="login()" type="submit" id="loginBtn-mob">Submit</button>
+                                <p class="toggle-link" id="registration-link-mob">Don't have account ? <a href="#registration-form"
                                         class="registerbtn">Register</a> </p>
                             </form>
         
         
-                            <form id="signup-form" class="form2 form-panel hidden">
+                            <form id="signup-form-mob" class="form2 form-panel hidden">
                                 <h2>Sign up</h2>
                                 <label for="reg-username">Username:</label>
                                 <input type="text" id="reg-username" name="username" autocomplete="given-name" required>
@@ -46,16 +73,17 @@
                                 <input type="password" id="reg-password" name="password" autocomplete="off" required>
         
                                 <button onclick="register()" type="submit" id="regBtn">Submit</button>
-                                <p class="toggle-link" id="signin-link">Already have account <a href="#signin-form"
+                                <p class="toggle-link" id="signin-link-mob">Already have account <a href="#signin-form"
                                         class="loginbtn">Login</a> </p>
                             </form>
                         </div>
         
                 </li>
             </ul>
+        </nav>
         </div>
 <!-- pc menus -->
-            <button class="menu-btn closed"><img src="images/menu_9548704.png"></button>
+    <div id="big-menu">
         <div class="logo">
             <img src="images/red-logo.png" alt="Delicious Bite Logo">
         </div>
@@ -65,14 +93,14 @@
                 <span id="locat-space">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</span>
             </div>
             <div id="loc-box">
-                <input type="text" id="pin" placeholder="Enter PIN">
+                <input type="text" id="pin" placeholder="Enter area Pin">
                 <img src="images/icons/location.svg">
             </div>
            <span id="loc-img"> <img src="images/icons/pin.svg"></span>
         <!-- </div> -->
         <nav id="nav-list">
            
-                <div id="li1"><input type="search" id="search" placeholder="Search restaurants..."
+                <div id="li1"><input type="search" id="search" placeholder="Search restaurants.."
                         aria-label="Search restaurants"> <span id="search-count"
                         ></span><span id="srch-btn"><img
                             src="images/icons/search.svg"></span>
@@ -129,6 +157,7 @@
              </ul>
              </div>
         </nav>
+        </div>
     </header>
     <div class="container">
         <!-- Category section -->
@@ -210,6 +239,19 @@
                 </div>
             </div>
 
+             <div class="popular-card search-item" data-search-text="Burger King Burgers American Trikuta Nagar">
+               <a href="items.html"> <img src="images/burgerking.avif" alt="burgerking"></a>
+               <a href="items.html"> <h3 class="name">Burger King</h3> </a>
+                <div class="card-inner">
+                    <div class="points">
+                        <p class="star"><img src="images/icons/star.svg">4.7</p>
+                        <p class="time"> 30-35 mins</p>
+                    </div>
+                    <p class="tag">Burgers, American..</p>
+                    <p class="location">Trikuta Nagar</p>
+                </div>
+            </div>
+
             <div class="popular-card search-item" data-search-text="Pizza Hut Pizzas Desserts American Bathindi">
                <a href="items.html"> <img src="images/pizzahut.avif" alt="pizzahut"></a>
               <a href="items.html">  <h3 class="name">Pizza Hut</h3></a>
@@ -220,6 +262,19 @@
                     </div>
                     <p class="tag">Pizzas, Desserts, American..</p>
                     <p class="location">Bathindi</p>
+                </div>
+            </div>
+
+             <div class="popular-card search-item" data-search-text="Burger King Burgers American Trikuta Nagar">
+               <a href="items.html"> <img src="images/burgerking.avif" alt="burgerking"></a>
+               <a href="items.html"> <h3 class="name">Burger King</h3> </a>
+                <div class="card-inner">
+                    <div class="points">
+                        <p class="star"><img src="images/icons/star.svg">4.7</p>
+                        <p class="time"> 30-35 mins</p>
+                    </div>
+                    <p class="tag">Burgers, American..</p>
+                    <p class="location">Trikuta Nagar</p>
                 </div>
             </div>
 
@@ -236,7 +291,31 @@
                 </div>
             </div>
 
+            <div class="popular-card search-item" data-search-text="KC360 North Indian Chinese Sainik Colony">
+              <a href="items.html">  <img src="images/kc360.avif" alt="kc360"></a>
+               <a href="items.html"> <h3 class="name">KC360</h3></a>
+                <div class="card-inner">
+                    <div class="points">
+                        <p class="star"><img src="images/icons/star.svg">4.7</p>
+                        <p class="time"> 30-35 mins</p>
+                    </div>
+                    <p class="tag">North Indian, Chinese,</p>
+                    <p class="location">Sainik Colony</p>
+                </div>
+            </div>
 
+               <div class="popular-card search-item" data-search-text="Pizza Hut Pizzas Desserts American Bathindi">
+               <a href="items.html"> <img src="images/pizzahut.avif" alt="pizzahut"></a>
+              <a href="items.html">  <h3 class="name">Pizza Hut</h3></a>
+                <div class="card-inner">
+                    <div class="points">
+                        <p class="star"><img src="images/icons/star.svg">4.7</p>
+                        <p class="time"> 30-35 mins</p>
+                    </div>
+                    <p class="tag">Pizzas, Desserts, American..</p>
+                    <p class="location">Bathindi</p>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Restruants with online delihvery -->
