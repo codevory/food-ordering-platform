@@ -486,13 +486,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
 })
 
-// Toggle menu
-const menuBtn = document.querySelector('.menu-btn')
-const menu = document.querySelector('#menu-2')
+// Mobile login system
 
-menuBtn.addEventListener('click',()=>{
-    if(menuBtn.classList.contains("clossed")){
-        menu.classList.add('open')
-        menuBtn.classList.toggle('closed')
-    }
-})

@@ -12,6 +12,50 @@
     <!-- Header -->
     <header id="header">
         <div id="small-menu">
+            <!-- Toggle menu -->
+          <div class="toggle-menu hidden">
+            <ul id="menu-mobile-mob">
+                <li><a href="about.html"><img src="images/icons/phone.svg"> Help</a></li>
+                <li><a href="menu.html"><img src="images/icons/offers.svg"> Offers</a></li>
+                <li class="login-btn-mob"><button id="open-modal-btn-mob"><img src="images/icons/user.svg">login</button>
+        
+                    <div id="modal-overlay-mob" class="modal-overlay">
+                        <div class="modal-content-mob">
+                            <span class="close-btn">&times;</span>
+                            <form id="signin-form-mob" class="form1-mob form-panel ">
+                                <h2>Sign in</h2>
+                                <label for="username">Username:</label>
+                                <input type="text" id="username-mob" name="username" autocomplete="given-name" required>
+        
+                                <label for="password">Password:</label>
+                                <input type="password" id="password-mob" name="password" autocomplete="off" required>
+        
+                                <button onclick="login()" type="submit" id="loginBtn-mob">Submit</button>
+                                <p class="toggle-link" id="registration-link-mob">Don't have account ? <a href="#registration-form"
+                                        class="registerbtn-mob">Register</a> </p>
+                            </form>
+        
+        
+                            <form id="signup-form-mob" class="form2-mob form-panel hidden">
+                                <h2>Sign up</h2>
+                                <label for="reg-username">Username:</label>
+                                <input type="text" id="reg-username-mob" name="username" autocomplete="given-name" required>
+        
+                                <label for="reg-email">Email:</label>
+                                <input type="email" id="reg-email-mob" name="email" autocomplete="off" required>
+        
+                                <label for="reg-password">Password:</label>
+                                <input type="password" id="reg-password-mob" name="password" autocomplete="off" required>
+        
+                                <button onclick="register()" type="submit" id="regBtn-mob">Submit</button>
+                                <p class="toggle-link" id="signin-link-mob">Already have account <a href="#signin-form"
+                                        class="loginbtn-mob">Login</a> </p>
+                            </form>
+                        </div>
+        
+                </li>
+            </ul>
+        </div>
             <!-- menu button -->
               <button class="menu-btn closed"><img src="images/menu_9548704.png"></button>
             <!-- logo -->
@@ -22,64 +66,22 @@
           <!-- <div class="location-cont"> -->
             <div id="loc-mob">
                 <h3 id="p1-mob"><big id="big-mob">Deliver</big><small>to</small></h3>
-                <span id="locat-space">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</span>
+                <span id="locat-space-mob">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</span>
             </div>
             <div id="loc-box-mob">
-                <input type="text" id="pin" placeholder="Area Pin">
+                <input type="text" id="pin-mob" placeholder="Area Pin">
                 <img src="images/icons/location.svg">
             </div>
            <span id="loc-img-mob"> <img src="images/icons/pin.svg"></span>
         <!-- </div> -->
         <nav id="nav-list-mob">
            
-                <div id="li1-mob"><input type="search" id="search" placeholder="Search Here"
-                        aria-label="Search restaurants"> <span id="search-count"
+                <div id="li1-mob"><input type="search" id="search-mob" placeholder="Search Here"
+                        aria-label="Search restaurants"> <span id="search-count-mob"
                         ></span><span id="srch-btn-mob"><img
                             src="images/icons/search.svg"></span>
                  </div>
         
-
-            <ul id="menu-mobile-mob" class="hidden">
-                <li><a href="about.html"><img src="images/icons/phone.svg"> Help</a></li>
-                <li><a href="menu.html"><img src="images/icons/offers.svg"> Offers</a></li>
-                <li class="login-btn"><button id="open-modal-btn"><img src="images/icons/user.svg">login</button>
-        
-                    <div id="modal-overlay" class="modal-overlay">
-                        <div class="modal-content">
-                            <span class="close-btn">&times;</span>
-                            <form id="signin-form-mob" class="form1 form-panel ">
-                                <h2>Sign in</h2>
-                                <label for="username">Username:</label>
-                                <input type="text" id="username" name="username" autocomplete="given-name" required>
-        
-                                <label for="password">Password:</label>
-                                <input type="password" id="password" name="password" autocomplete="off" required>
-        
-                                <button onclick="login()" type="submit" id="loginBtn-mob">Submit</button>
-                                <p class="toggle-link" id="registration-link-mob">Don't have account ? <a href="#registration-form"
-                                        class="registerbtn">Register</a> </p>
-                            </form>
-        
-        
-                            <form id="signup-form-mob" class="form2 form-panel hidden">
-                                <h2>Sign up</h2>
-                                <label for="reg-username">Username:</label>
-                                <input type="text" id="reg-username" name="username" autocomplete="given-name" required>
-        
-                                <label for="reg-email">Email:</label>
-                                <input type="email" id="reg-email" name="email" autocomplete="off" required>
-        
-                                <label for="reg-password">Password:</label>
-                                <input type="password" id="reg-password" name="password" autocomplete="off" required>
-        
-                                <button onclick="register()" type="submit" id="regBtn">Submit</button>
-                                <p class="toggle-link" id="signin-link-mob">Already have account <a href="#signin-form"
-                                        class="loginbtn">Login</a> </p>
-                            </form>
-                        </div>
-        
-                </li>
-            </ul>
         </nav>
         </div>
 <!-- pc menus -->
