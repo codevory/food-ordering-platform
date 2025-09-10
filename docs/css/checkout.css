@@ -147,7 +147,9 @@ a{
 /* --- Responsive Design --- */
 @media (max-width: 600px) {
     .checkout-container {
-        padding: 20px;
+        width:100%;
+        max-width:100vw;
+        padding: 10px;
     }
 
     .checkout-header h1 {
@@ -187,6 +189,8 @@ a{
     height:34px;
     border-radius:8px;
     background-color:#0d5571;
+    color:white;
+    font-weight:600;
 }
 
 #coupon-message{
@@ -227,3 +231,14 @@ a{
     border-radius:8px;
     color:white;
 }
+
+/* Mobile */
+@media(max-width:768px){#coupon-cont{
+    width:100%;
+    max-width:100vw;
+    display:flex;
+    justify-content:space-between;
+   gap:0;
+    overflow:scroll;
+    padding:0;
+}}
