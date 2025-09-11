@@ -10,9 +10,19 @@
 </head>
 
 <body>
+    <div id="main-container">
     <div id="head-cont">
 
-      <div id="recent-ord">
+        <div id="upper-container">
+            <h1> Track your Orders</h1>
+            <p>Enter your tracking Id </p>
+            <div id="track-box">
+                <input type="text" id="track-input" placeholder="ORD1633171618398" required>
+                <button id="track-btn">Track</button>
+            </div>
+        </div>
+
+        <div id="recent-ord">
         <h2>Recent Orders</h2>
             <ul id="ord-sp" >
                <li class="ord-txt">No orders placed</li>
@@ -20,15 +30,6 @@
             </ul>
         </div>
 
-
-        <div id="upper-container">
-            <h1> Track your Orders</h1>
-            <p>Enter your tracking Id below to track your order</p>
-            <div id="track-box">
-                <input type="text" id="track-input" placeholder="ORD1633171618398" required>
-                <button id="track-btn">Track</button>
-            </div>
-        </div>
 
     </div>
     <!-- loader section -->
@@ -74,7 +75,7 @@
             </div>
         </div>
         <!-- <progress id="progres" value="70" max="100"></progress> -->
-        <meter id="progres" value="0.68">70%</meter>
+        <meter id="progres" value="1">100%</meter>
         <div id="date" class="detail">
             <i class="fa-solid fa-calendar-alt icon"></i>
             <p>Order Date</p>
@@ -104,7 +105,7 @@
             <div id="pop-content" class="pop hidden">
                 <p>Kindly enter your tracking id</p>
             </div>
-        
+    </div>
     <script src="js/track.js"></script>
 </body>
 
