@@ -1,35 +1,37 @@
 body{
-    margin:5px auto;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 
 
 
+#main-container{
+    width:100vw;
+    height:100vh;
+    display:grid;
+    grid-template-columns:auto 2fr;
+    margin:20px;
+}
 #head-cont{
-    background-color:rgb(255, 255, 255);
+    width:50%;
     display:flex;
     justify-content:flex-start;
-    align-items:center;
-    gap:150px;
-    margin-top:10px;
-    margin-left:50px;  
+    flex-direction:column;
+    gap:10%;
 }
 
 #recent-ord{
-    width:20%;
-    height:400px;
+    width:auto;
+    height:auto;
     background-color:rgb(255, 255, 255);
     border-radius:12px;
-   margin-left:60px;
    margin-top:10px;
    padding:5px;
-   flex-shrink:0.1;
 }
 
-#recent-ord h2{
-    text-align:center;
-    font-family:cursive;
-}
+
 #ord-sp{
     display:flex;
     justify-content:flex-start;
@@ -96,10 +98,11 @@ body{
 .loader{
     display:flex;
     justify-content:center;
-    align-items:center;
+    align-items:flex-start;
     gap:8px;
-    margin-block:30px;
-    margin-left:100px;
+   position:absolute;
+   top:10%;
+   right:20%;
 }
 
 .loader-inside{
@@ -205,13 +208,13 @@ h4{
       background-color:rgb(234, 232, 232);
     border-radius:50%;
     padding:10px;
-    color:rgb(18, 70, 23);
+    color:grey;
 }
 .fa-house-chimney{
       background-color:rgb(234, 232, 232);
     border-radius:50%;
     padding:10px;
-    color:grey;
+    color:rgb(18, 70, 23);
 }
 .step-p{
     color:grey;
@@ -319,3 +322,69 @@ display:none;
 .pop.hidden{
     display:none;
 }
+
+@media(max-width:1000px){
+    #main-container{
+    width:100vw;
+    height:100vh;
+    display:grid;
+    grid-template-columns:auto 2fr;
+    flex-wrap:wrap;
+    margin:10px;}
+
+    #head-cont{
+    width:350px;
+    display:flex;
+    justify-content:flex-start;
+    flex-direction:column;
+    gap:10%;
+}
+
+#upper-container{
+    display:flex;
+    justify-items:center;
+    align-items:center;
+    flex-direction:column;
+    background-color:rgb(241, 186, 186);
+    width:300px;
+    height:250px;
+    border-radius:12px;
+    padding:3px;
+    flex-wrap:wrap;
+    box-shadow:0 6px 45px rgb(0, 0, 0,0.16);}
+
+    #upper-container p{
+        font-size:1rem;
+    }
+    #upper-container h1{
+        font-size:1.4rem;}
+
+    #lower-container{
+    width:100%;
+    max-width:45vw;
+    height:100%;
+    background-color:rgb(255, 255, 255);
+    padding:0;
+    margin-left:0;}
+
+    #progres{
+    width:42vw;
+    margin-left:20px;
+    animation:prog 2s linear 1;}
+
+    .message{
+    width:350px;
+    height:100vh;
+    border-radius:12px;
+    text-align:center;
+    background-color:rgb(255, 255, 255);
+    margin-left:10px;
+}
+
+.message p{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:1.1rem;
+    width:100%;
+}
+}
+
