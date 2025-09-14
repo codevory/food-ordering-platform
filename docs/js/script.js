@@ -104,6 +104,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         // filter(input.value || '');
     })();
+
+
+     /* SEARCH FUNCTIONALITY for Mobile*/
+    (function initSearch() {
+        const input = document.getElementById('search-mob');
+        if (!input) {
+            console.warn('home.js: #search input not found');
+            return;
+        }
+        const items = Array.from(document.querySelectorAll('.search-item'));
+        const count = document.querySelector('#search-count-mob'); 
+        if (items.length === 0) {
+            console.warn("home.js: No .search-item elements found.");
+        }
+        const normalize = str => (str || '').toString().toLowerCase();
+        const getItemText = el => el.getAttribute('data-search-text') || el.textContent || '';
+
+        function filter(term) {
+            const q = normalize(term.trim());
+            let visible = 0;
+            items.forEach(el => {
+                const text = normalize(getItemText(el));
+                const match = !q || text.includes(q);
+                el.style.display = match ? '' : 'none';
+                if (match) visible++;
+            });
+            if (count) count.textContent = visible + (visible === 1 ? ' result' : ' results');
+        }
+
+        // Debounce for performance on large lists
+        let t;
+        input.addEventListener('input', () => {
+            clearTimeout(t);
+            t = setTimeout(() => filter(input.value), 120);
+        });
+        // filter(input.value || '');
+    })();
 });
 
 let cartCount = document.getElementById('cart-count')
@@ -113,10 +150,7 @@ let quantity = saved.reduce((sum,item) => sum + item.quantity,0 )
 
 cartCount.textContent = (quantity)
 console.log(quantity)
-document.addEventListener('DOMContentLoaded', () => {
-const locName = document.getElementById('locat-space')
-const pinInput = document.getElementById('pin')
-const pinBtn = document.getElementById('pin-btn')
+
 
 const locations = {
   193101: "Laridora",
@@ -255,7 +289,7 @@ const locations = {
   182222: "Bhaderwah",
   182312: "Jyotipuram ",
   193505: "Watapora ",
-  181131: "Allah ",
+  181131: "Allahabad ",
   180003: "Mandal",
   181101: "Khour Devian",
   181224: "Tahra BO",
@@ -332,6 +366,11 @@ const locations = {
   190024: "Zakoora",
   182207: "GANDOH SO"
 };
+// location fetching for bigger screens
+document.addEventListener('DOMContentLoaded', () => {
+const locName = document.querySelector('#locat-space')
+const pinInput = document.querySelector('#pin')
+
 
 
 let debounceTimer = ''
@@ -359,6 +398,36 @@ else{
   
 })
 
+
+// Location fetching for phone
+document.addEventListener('DOMContentLoaded',function(){
+const locName = document.querySelector('#locat-space-mob')
+const pinInput = document.querySelector('#pin-mob')
+
+let debounceTimer = ''
+pinInput.addEventListener('input',function(e){
+    let value = e.target.value
+    if(value.length <= 5 ){
+        locName.textContent = 'ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ'
+        return
+    }
+    clearTimeout(debounceTimer)
+locName.textContent = "Fetching Location.."
+locName.style.color = "gray"
+    setTimeout(()=>{
+let locationName  = ''
+if(locationName = locations[value]){
+    locName.textContent = locationName
+    locName.style.color = "darkgreen"
+}
+else{
+    locName.textContent = "Not available"
+    locName.style.color = "brown"
+}
+    },500)
+})
+
+})
 
 
 // Signin floating form
@@ -484,4 +553,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
     window.location.href = 'http://127.0.0.1:5500/projects/java/home.html';
     })
   
+})
+
+// Mobile login system
+
+// Toggle Menu
+
+
+const menu = document.querySelector('.toggle-menu')
+const openBtn = document.querySelector('.menu-btn')
+const closeBtn = document.getElementById('close-btn')
+
+openBtn.addEventListener('click',function(){
+    menu.classList.add('active')
+})
+closeBtn.addEventListener('click',()=>{
+    menu.classList.remove('active')
 })
