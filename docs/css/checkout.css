@@ -146,6 +146,10 @@ a{
 
 /* --- Responsive Design --- */
 @media (max-width: 600px) {
+    body{
+        padding:0;
+
+    }
     .checkout-container {
         width:100%;
         max-width:100vw;
@@ -242,3 +246,18 @@ a{
     overflow:scroll;
     padding:0;
 }}
+/* 460px responsive button */
+@media(max-width:460px){
+    .buttons{
+        margin-left:40px;
+        border-radius:5px;
+    }
+    .item-list li{
+        font-size:13px;
+    }
+}
+@media(max-width:325px){
+    .item-list li{
+        font-size:12px;
+    }
+}
