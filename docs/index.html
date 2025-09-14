@@ -5,472 +5,611 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicious Bite</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- Header Menu -->
-    <header id="header">
-        <div id="hamberg-menu"></div>
-        <div class="logo">
-            <img src="images/red-logo.png" alt="Delicious Bite Logo">
-        </div>
-        <div class="location-cont">
-            <div id="loc">
-                <h3 id="p1"><big id="big">Deliver</big><small>to</small></h3>
-                <span id="locat-space">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</span>
-            </div>
-            <div id="loc-box">
-                <input type="text" id="pin" placeholder="Enter your PIN">
-                <button id="pin-btn"><img src="images/icons/location.svg"> </button>
-            </div>
-            <img src="images/icons/pin.svg">
-        </div>
-        <nav id="nav-list">
-            <ul>
-                <li id="li1"><input type="search" id="search" placeholder="Search restaurants..."
-                        aria-label="Search restaurants"> <span id="search-count"
-                        ></span><button id="srch-btn"><img
-                            src="images/icons/search.svg"></button> </li>
-                <li><a href="about.html"><img src="images/icons/phone.svg"> Help</a></li>
-                <li><a href="menu.html"><img src="images/icons/offers.svg"> Offers</a></li>
-                <li><button id="open-modal-btn"><img src="images/icons/user.svg"> Sign in</button>
-                   
+    <!-- <div id="content-sec"> -->
+<div class="main-container">
 
-                        <div id="modal-overlay" class="modal-overlay">
-                            <div class="modal-content">
-                                <span class="close-btn">&times;</span>
-                                <form id="signin-form" class="form1 form-panel ">
-                                    <h2>Sign in</h2>
-                                    <label for="username">Username:</label>
-                                    <input type="text" id="username" name="username" autocomplete="given-name" required>
+        <!-- Header -->
+        <header id="header">
 
-                                    <label for="password">Password:</label>
-                                    <input type="password" id="password" name="password" autocomplete="off" required>
-
-                                    <button onclick="login()"  type="submit" id="loginBtn" >Submit</button>
-                                    <p class="toggle-link" id="registration-link">Don't have account ? <a
-                                            href="#registration-form" class="registerbtn" >Register</a> </p>
-                                </form>
-
-
-                        <form id="signup-form" class="form2 form-panel hidden">
-                            <h2>Sign up</h2>
-                            <label for="reg-username">Username:</label>
-                            <input type="text" id="reg-username" name="username" autocomplete="given-name" required>
-
-                             <label for="reg-email">Email:</label>
-                            <input type="email" id="reg-email" name="email" autocomplete="off" required>
-
-                            <label for="reg-password">Password:</label>
-                            <input type="password" id="reg-password" name="password" autocomplete="off" required>
-
-                            <button onclick="register()"   type="submit" id="regBtn" >Submit</button>
-                            <p class="toggle-link" id="signin-link">Already have account <a
-                                    href="#signin-form" class="loginbtn" >Login</a> </p>
-                        </form>
-                            </div>
-                        
-                </li>
-
-
+            <div class="small-menu">
+                <!-- menu button -->
+                <button class="menu-btn"><img src="images/menu_9548704.png"></button>
+                <!-- logo -->
+                <div class="logo">
+                    <img src="images/red-logo.png" alt="Delicious Bite Logo">
                 </div>
-                <li>
-                    <div id="cart-img"><a href="checkout.html"> <img class="cart-icon" src="images/icons/cart.png"><span
-                                id="cart-count">0</span></a></div>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <!-- Category section -->
-        <div class="category-sec">
-            <div id="category-top">
-                <h2>What's in your mind</h2>
-                <div id="slider-btn">
-                    <button class="arrow-btnleft"><i class="fa-solid fa-arrow-left"></i></button>
-                    <button class="arrow-btnright"><i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
 
-            <div class="category-container">
-                <div class="slider-track">
-                  <a href="items.html"> <img src="images/biryani.avif" alt="biryani" class="slider-img"></a> 
-                   <a href="items.html"> <img src="images/north indian.avif" alt="north indian" class="slider-img"></a>
-                   <a href="items.html"> <img src="images/pizzaavif.avif" alt="pizza" class="slider-img"></a>
-                   <a href="items.html"> <img src="images/noodles.avif" alt="noodles" class="slider-img"></a>
-                   <a href="items.html"> <img src="images/rolls.avif" alt="rolls" class="slider-img"></a>
-                   <a href="items.html"> <img src="images/dosa.avif" alt="dosa" class="slider-img"></a>
-                   <a href="items.html"> <img src="images/pratha.avif" alt="pratha" class="slider-img"></a>
-                   <a href="items.html"> <img src="images/burgersavif.avif" alt="burger" class="slider-img"></a>
-                   <a href="items.html"> <img src="images/shake.avif" alt="shake" class="slider-img"></a>
-                   <a href="items.html"> <img src="images/lassi.avif" alt="lassi" class="slider-img"></a>
-                   <a href="items.html"> <img src="images/pure veg.avif" alt="pureveg" class="slider-img"></a>
-                   <a href="items.html"> <img src="images/chole bathure.avif" alt="chole bathure" class="slider-img"></a>
-                   <a href="items.html"> <img src="images/pakoda.avif" alt="pakoda" class="slider-img"></a>
-                   <a href="items.html"> <img src="images/pasta.avif" alt="pasta" class="slider-img"></a>
+                <div class="location-cont mob">
+                <div id="loc-mob">
+                    <h3 id="p1-mob"><big id="big-mob">Deliver</big><small>to</small></h3>
+                    <span id="locat-space-mob" >ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</span>
+                </div>
+                <div id="loc-box-mob">
+                    <input type="text" id="pin-mob" placeholder="Area Pin" >
+                    <img src="images/icons/location.svg">
+                </div>
+                <span id="loc-img-mob"> <img src="images/icons/pin.svg"></span>
+                </div>
+                <nav id="nav-list-mob">
+
+                    <div id="li1-mob"><input type="search" id="search-mob"  placeholder="Search"
+                            aria-label="Search restaurants"> <span id="search-count-mob"></span><span
+                            id="srch-btn-mob"><img src="images/icons/search.svg"></span>
+                    </div>
+
+                </nav>
+            </div>
+            <!-- pc menus -->
+            <div id="big-menu">
+                <div class="logo">
+                    <img src="images/red-logo.png" alt="Delicious Bite Logo">
+                </div>
+                <!-- <div class="location-cont"> -->
+                    <div class="location-cont">
+                <div id="loc">
+                    <h3 id="p1"><big id="big">Deliver</big><small>to</small></h3>
+                    <span id="locat-space" >ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</span>
+                </div>
+                <div id="loc-box">
+                    <input type="text" id="pin"  placeholder="Enter area Pin">
+                    <img src="images/icons/location.svg">
+                </div>
+                <span id="loc-img"> <img src="images/icons/pin.svg"></span>
+                </div>
+                <!-- </div> -->
+                <nav id="nav-list">
+
+                    <div id="li1"><input type="search" id="search"  placeholder="Search restaurants.."
+                            aria-label="Search restaurants"> <span id="search-count"></span><span id="srch-btn"><img
+                                src="images/icons/search.svg"></span>
+                    </div>
+
+                    <!-- menu 2 -->
+                    <div id="menu-mob">
+                        <ul id="menu-2">
+                            <li><a href="#"><img src="images/icons/phone.svg"> Help</a></li>
+                            <li><a href="#"><img src="images/icons/offers.svg"> Offers</a></li>
+                            <li><button id="open-modal-btn"><img src="images/icons/user.svg"> Sign in</button>
+
+
+                                <div id="modal-overlay" class="modal-overlay">
+                                    <div class="modal-content">
+                                        <span class="close-btn">&times;</span>
+                                        <form id="signin-form" class="form1 form-panel ">
+                                            <h2>Sign in</h2>
+                                            <label for="username">Username:</label>
+                                            <input type="text" id="username" name="username" autocomplete="given-name"
+                                                required>
+
+                                            <label for="password">Password:</label>
+                                            <input type="password" id="password" name="password" autocomplete="off"
+                                                required>
+
+                                            <button onclick="login()" type="submit" id="loginBtn">Submit</button>
+                                            <p class="toggle-link" id="registration-link">Don't have account ? <a
+                                                    href="#registration-form" class="registerbtn">Register</a> </p>
+                                        </form>
+
+
+                                        <form id="signup-form" class="form2 form-panel hidden">
+                                            <h2>Sign up</h2>
+                                            <label for="reg-username">Username:</label>
+                                            <input type="text" id="reg-username" name="username"
+                                                autocomplete="given-name" required>
+
+                                            <label for="reg-email">Email:</label>
+                                            <input type="email" id="reg-email" name="email" autocomplete="off" required>
+
+                                            <label for="reg-password">Password:</label>
+                                            <input type="password" id="reg-password" name="password" autocomplete="off"
+                                                required>
+
+                                            <button onclick="register()" type="submit" id="regBtn">Submit</button>
+                                            <p class="toggle-link" id="signin-link">Already have account <a
+                                                    href="#signin-form" class="loginbtn">Login</a> </p>
+                                        </form>
+                                    </div>
+
+                            </li>
+
+                            <li>
+                                <div id="cart-img"><a href="checkout.html"> <img class="cart-icon"
+                                            src="images/icons/cart.png"><span id="cart-count">0</span></a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    <div class="content-section">
+        <div class="categ-outer-cont">
+        <div class="container">
+            <!-- Category section -->
+            <div class="category-sec">
+                <div id="category-top">
+                    <h2>What's in your mind</h2>
+                    <div id="slider-btn">
+                        <button class="arrow-btnleft"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button class="arrow-btnright"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="category-container">
+                    <div class="slider-track">
+                        <a href="items.html"> <img src="images/biryani.avif" alt="biryani" class="slider-img"></a>
+                        <a href="items.html"> <img src="images/north indian.avif" alt="north indian"
+                                class="slider-img"></a>
+                        <a href="items.html"> <img src="images/pizzaavif.avif" alt="pizza" class="slider-img"></a>
+                        <a href="items.html"> <img src="images/noodles.avif" alt="noodles" class="slider-img"></a>
+                        <a href="items.html"> <img src="images/rolls.avif" alt="rolls" class="slider-img"></a>
+                        <a href="items.html"> <img src="images/dosa.avif" alt="dosa" class="slider-img"></a>
+                        <a href="items.html"> <img src="images/pratha.avif" alt="pratha" class="slider-img"></a>
+                        <a href="items.html"> <img src="images/burgersavif.avif" alt="burger" class="slider-img"></a>
+                        <a href="items.html"> <img src="images/shake.avif" alt="shake" class="slider-img"></a>
+                        <a href="items.html"> <img src="images/lassi.avif" alt="lassi" class="slider-img"></a>
+                        <a href="items.html"> <img src="images/pure veg.avif" alt="pureveg" class="slider-img"></a>
+                        <a href="items.html"> <img src="images/chole bathure.avif" alt="chole bathure"
+                                class="slider-img"></a>
+                        <a href="items.html"> <img src="images/pakoda.avif" alt="pakoda" class="slider-img"></a>
+                        <a href="items.html"> <img src="images/pasta.avif" alt="pasta" class="slider-img"></a>
+                    </div>
                 </div>
             </div>
         </div>
+       </div>
+
+        <!-- offer section -->
+        <div class="offer-sec">
+            <div class="slider">
+                <a href="items.html"> <img src="images/foodOfferbanner.jpg" alt="Food Offer Banner"
+                        class="banner active"></a>
+                <a href="items.html"> <img src="images/food-menu-restaurant-facebook-cover-banner.jpg"
+                        alt="Food Offer Banner" class="banner"></a>
+                <a href="items.html"> <img src="images/foodofferbanner2.jpg" class="banner"></a>
+            </div>
+            <!-- buttons -->
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            <!-- Dots -->
+            <div class="dots"></div>
+        </div>
+
+        <!-- popular resturants -->
+        <div class="popular-sec">
+            <div class="popular-inner1">
+                <h2>Popular Resturants</h2>
+            </div>
+
+            <div class="popular-inner2">
+
+                <div class="popular-card search-item" data-search-text="Burger King Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/burgerking.avif" alt="burgerking"></a>
+                    <a href="items.html">
+                        <h3 class="name">Burger King</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+                <div class="popular-card search-item" data-search-text="KC360 North Indian Chinese Sainik Colony">
+                    <a href="items.html"> <img src="images/kc360.avif" alt="kc360"></a>
+                    <a href="items.html">
+                        <h3 class="name">KC360</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">North Indian, Chinese,</p>
+                        <p class="location">Sainik Colony</p>
+                    </div>
+                </div>
+
+                <div class="popular-card search-item" data-search-text="Burger King Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/burgerking.avif" alt="burgerking"></a>
+                    <a href="items.html">
+                        <h3 class="name">Burger King</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+                <div class="popular-card search-item" data-search-text="Pizza Hut Pizzas Desserts American Bathindi">
+                    <a href="items.html"> <img src="images/pizzahut.avif" alt="pizzahut"></a>
+                    <a href="items.html">
+                        <h3 class="name">Pizza Hut</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Pizzas, Desserts, American..</p>
+                        <p class="location">Bathindi</p>
+                    </div>
+                </div>
+
+                <div class="popular-card search-item" data-search-text="Burger King Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/burgerking.avif" alt="burgerking"></a>
+                    <a href="items.html">
+                        <h3 class="name">Burger King</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+                <div class="popular-card search-item" data-search-text="Mc Donald Fried Chicken Malik Market">
+                    <a href="items.html"> <img src="images/macde-pack.avif" alt="macde-pack"></a>
+                    <a href="items.html">
+                        <h3 class="name">Mc Donald</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Fried Chicken, Mac Alootikee..</p>
+                        <p class="location">Malik Market</p>
+                    </div>
+                </div>
+
+                <div class="popular-card search-item" data-search-text="KC360 North Indian Chinese Sainik Colony">
+                    <a href="items.html"> <img src="images/kc360.avif" alt="kc360"></a>
+                    <a href="items.html">
+                        <h3 class="name">KC360</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">North Indian, Chinese,</p>
+                        <p class="location">Sainik Colony</p>
+                    </div>
+                </div>
+
+                <div class="popular-card search-item" data-search-text="Pizza Hut Pizzas Desserts American Bathindi">
+                    <a href="items.html"> <img src="images/pizzahut.avif" alt="pizzahut"></a>
+                    <a href="items.html">
+                        <h3 class="name">Pizza Hut</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Pizzas, Desserts, American..</p>
+                        <p class="location">Bathindi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Restruants with online delihvery -->
+        <div class="Hero">
+            <div class="Hero-inner">
+                <h2>Restaurants with online food delivery in Jammu</h2>
+            </div>
+            <div class="hero-inner2">
+
+                <div class="hero-card search-item" data-search-text="Burger King Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/hotel5.avif" alt="burger king"></a>
+                    <a href="items.html">
+                        <h3 class="name">Burger King</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+                <div class="hero-card search-item" data-search-text="Foodie Hub Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/hotel2.avif" alt="hotel"> </a>
+                    <a href="items.html">
+                        <h3 class="name">Foodie Hub</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+                <div class="hero-card search-item" data-search-text="North Special Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/hotel3.avif" alt="hotel"></a>
+                    <h3 class="name">North Special</h3>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+                <div class="hero-card search-item" data-search-text="KC Plazza Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/hotel1.avif" alt="hotel"></a>
+                    <a href="items.html">
+                        <h3 class="name">KC Plazza</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="hero-card search-item" data-search-text="Shourian wala Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/hotel5.avif" alt="burger king"></a>
+                    <a href="items.html">
+                        <h3 class="name">Shourian wala</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+                <div class="hero-card search-item" data-search-text="Dahi ka Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/hotel2.avif" alt="hotel"></a>
+                    <a href="items.html">
+                        <h3 class="name">Dahi ka</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+                <div class="hero-card search-item" data-search-text="Jammu Di Hatti Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/hotel3.avif" alt="hotel"></a>
+                    <a href="items.html">
+                        <h3 class="name">Jammu Di Hatti</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+                <div class="hero-card search-item" data-search-text="Apna Kabab Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/hotel1.avif" alt="hotel"></a>
+                    <a href="items.html">
+                        <h3 class="name">Apna Kabab</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+
+
+                <div class="hero-card search-item" data-search-text="Prem Di Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/hotel5.avif" alt="burger king"></a>
+                    <a href="items.html">
+                        <h3 class="name">Prem Di</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+                <div class="hero-card search-item" data-search-text="Mir kiryana Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/hotel2.avif" alt="hotel"></a>
+                    <a href="items.html">
+                        <h3 class="name">Mir kiryana</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+                <div class="hero-card search-item" data-search-text="Mummy's Kitchen Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/hotel3.avif" alt="hotel"></a>
+                    <a href="items.html">
+                        <h3 class="name">Mummy's Kitchen</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+                <div class="hero-card search-item" data-search-text="Nanu Da Pawa Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/hotel1.avif" alt="hotel"></a>
+                    <a href="items.html">
+                        <h3 class="name">Nanu Da Pawa</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+                <div class="hero-card search-item" data-search-text="Mummy's Food Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/hotel5.avif" alt="burger king"></a>
+                    <a href="items.html">
+                        <h3 class="name">Mummy's Food</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+                <div class="hero-card search-item" data-search-text="Dad's Kitchen Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/hotel2.avif" alt="hotel"></a>
+                    <a href="items.html">
+                        <h3 class="name">Dad's Kitchen</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+                <div class="hero-card search-item" data-search-text="Jackie's Dosa Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/hotel3.avif" alt="hotel"></a>
+                    <a href="items.html">
+                        <h3 class="name">Jackie's Dosa</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+
+                <div class="hero-card search-item" data-search-text="South Special Burgers American Trikuta Nagar">
+                    <a href="items.html"> <img src="images/hotel1.avif" alt="hotel"></a>
+                    <a href="items.html">
+                        <h3 class="name">South Special</h3>
+                    </a>
+                    <div class="card-inner">
+                        <div class="points">
+                            <p class="star"><img src="images/icons/star.svg">4.7</p>
+                            <p class="time"> 30-35 mins</p>
+                        </div>
+                        <p class="tag">Burgers, American..</p>
+                        <p class="location">Trikuta Nagar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+        <footer>
+            <hr>
+            <div class="ftr-cont">
+
+                <div id="company">
+                    <h3>Company</h3>
+                    <ul>
+                        <li>About us</li>
+                        <li>Corporate</li>
+                        <li>Careers</li>
+                        <li>Team</li>
+                    </ul>
+                </div>
+                <div id="about-us">
+                    <h3>Contact us</h3>
+                    <ul>
+                        <li>Support</li>
+                        <li>Partner with us</li>
+                        <li>Ride with us</li>
+                        <li>Press </li>
+                    </ul>
+                </div>
+                <div id="legal">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li>Terms & Conditions</li>
+                        <li>Cookie Policy</li>
+                        <li>Privacy Policy</li>
+                        <li>Investor Relations</li>
+                    </ul>
+                </div>
+
+                <div id="socials">
+                    <h3>Socials</h3>
+                    <a href="https://www.linkedin.com/in/shahijahan-pedhar/" target="_blank"><img
+                            src="images/social/linkedin.svg"></a>
+                    <a href="https://www.instagram.com/codevory/" target="_blank"><img
+                            src="images/social/instagram.svg"></a>
+                    <a href="https://x.com/ShahijahanQ" target="_blank"><img src="images/social/x.svg"></a>
+                    <div id="apps">
+                        <a href="#"><img src="images/app-badges/app-android.png"></a>
+                        <a href="#"><img src="images/app-badges/app-ios.png"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-
-    <!-- offer section -->
-    <div class="offer-sec">
-        <div class="slider">
-            <a href="items.html"> <img src="images/foodOfferbanner.jpg" alt="Food Offer Banner" class="banner active"></a>
-          <a href="items.html">  <img src="images/food-menu-restaurant-facebook-cover-banner.jpg" alt="Food Offer Banner" class="banner"></a>
-          <a href="items.html">  <img src="images/foodofferbanner2.jpg" class="banner"></a>
-        </div>
-        <!-- buttons -->
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-        <!-- Dots -->
-        <div class="dots"></div>
-    </div>
-
-    <!-- popular resturants -->
-    <div class="popular-sec">
-        <div class="popular-inner1">
-            <h2>Popular Resturants</h2>
-        </div>
-
-        <div class="popular-inner2">
-
-            <div class="popular-card search-item" data-search-text="Burger King Burgers American Trikuta Nagar">
-               <a href="items.html"> <img src="images/burgerking.avif" alt="burgerking"></a>
-               <a href="items.html"> <h3 class="name">Burger King</h3> </a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Burgers, American..</p>
-                    <p class="location">Trikuta Nagar</p>
-                </div>
-            </div>
-
-            <div class="popular-card search-item" data-search-text="KC360 North Indian Chinese Sainik Colony">
-              <a href="items.html">  <img src="images/kc360.avif" alt="kc360"></a>
-               <a href="items.html"> <h3 class="name">KC360</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">North Indian, Chinese,</p>
-                    <p class="location">Sainik Colony</p>
-                </div>
-            </div>
-
-            <div class="popular-card search-item" data-search-text="Pizza Hut Pizzas Desserts American Bathindi">
-               <a href="items.html"> <img src="images/pizzahut.avif" alt="pizzahut"></a>
-              <a href="items.html">  <h3 class="name">Pizza Hut</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Pizzas, Desserts, American..</p>
-                    <p class="location">Bathindi</p>
-                </div>
-            </div>
-
-            <div class="popular-card search-item" data-search-text="Mc Donald Fried Chicken Malik Market">
-               <a href="items.html"> <img src="images/macde-pack.avif" alt="macde-pack"></a>
-              <a href="items.html"> <h3 class="name">Mc Donald</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Fried Chicken, Mac Alootikee..</p>
-                    <p class="location">Malik Market</p>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-    <!-- Restruants with online delihvery -->
-    <div class="Hero">
-        <div class="Hero-inner">
-            <h2>Restaurants with online food delivery in Jammu</h2>
-        </div>
-        <div class="hero-inner2">
-
-            <div class="hero-card search-item" data-search-text="Burger King Burgers American Trikuta Nagar">
-               <a href="items.html"> <img src="images/hotel5.avif" alt="burger king"></a>
-               <a href="items.html"> <h3>Burger King</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Burgers, American..</p>
-                    <p class="location">Trikuta Nagar</p>
-                </div>
-            </div>
-
-            <div class="hero-card search-item" data-search-text="Foodie Hub Burgers American Trikuta Nagar">
-               <a href="items.html"> <img src="images/hotel2.avif" alt="hotel"> </a>
-               <a href="items.html"> <h3>Foodie Hub</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Burgers, American..</p>
-                    <p class="location">Trikuta Nagar</p>
-                </div>
-            </div>
-
-            <div class="hero-card search-item" data-search-text="North Special Burgers American Trikuta Nagar">
-              <a href="items.html"> <img src="images/hotel3.avif" alt="hotel"></a>
-                <h3>North Special</h3>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Burgers, American..</p>
-                    <p class="location">Trikuta Nagar</p>
-                </div>
-            </div>
-
-            <div class="hero-card search-item" data-search-text="KC Plazza Burgers American Trikuta Nagar">
-              <a href="items.html">  <img src="images/hotel1.avif" alt="hotel"></a>
-               <a href="items.html"> <h3>KC Plazza</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Burgers, American..</p>
-                    <p class="location">Trikuta Nagar</p>
-                </div>
-            </div>
-
-
-
-
-            <div class="hero-card search-item" data-search-text="Shourian wala Burgers American Trikuta Nagar">
-               <a href="items.html"> <img src="images/hotel5.avif" alt="burger king"></a>
-               <a href="items.html"> <h3>Shourian wala</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Burgers, American..</p>
-                    <p class="location">Trikuta Nagar</p>
-                </div>
-            </div>
-
-            <div class="hero-card search-item" data-search-text="Dahi ka Burgers American Trikuta Nagar">
-               <a href="items.html"> <img src="images/hotel2.avif" alt="hotel"></a>
-               <a href="items.html"> <h3>Dahi ka</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Burgers, American..</p>
-                    <p class="location">Trikuta Nagar</p>
-                </div>
-            </div>
-
-            <div class="hero-card search-item" data-search-text="Jammu Di Hatti Burgers American Trikuta Nagar">
-               <a href="items.html"> <img src="images/hotel3.avif" alt="hotel"></a>
-               <a href="items.html"> <h3>Jammu Di Hatti</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Burgers, American..</p>
-                    <p class="location">Trikuta Nagar</p>
-                </div>
-            </div>
-
-            <div class="hero-card search-item" data-search-text="Apna Kabab Burgers American Trikuta Nagar">
-              <a href="items.html">  <img src="images/hotel1.avif" alt="hotel"></a>
-               <a href="items.html"> <h3>Apna Kabab</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Burgers, American..</p>
-                    <p class="location">Trikuta Nagar</p>
-                </div>
-            </div>
-
-
-
-            <div class="hero-card search-item" data-search-text="Prem Di Burgers American Trikuta Nagar">
-              <a href="items.html"> <img src="images/hotel5.avif" alt="burger king"></a>
-               <a href="items.html"> <h3>Prem Di</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Burgers, American..</p>
-                    <p class="location">Trikuta Nagar</p>
-                </div>
-            </div>
-
-            <div class="hero-card search-item" data-search-text="Mir kiryana Burgers American Trikuta Nagar">
-               <a href="items.html"> <img src="images/hotel2.avif" alt="hotel"></a>
-               <a href="items.html"> <h3>Mir kiryana</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Burgers, American..</p>
-                    <p class="location">Trikuta Nagar</p>
-                </div>
-            </div>
-
-            <div class="hero-card search-item" data-search-text="Mummy's Kitchen Burgers American Trikuta Nagar">
-               <a href="items.html"> <img src="images/hotel3.avif" alt="hotel"></a>
-               <a href="items.html"> <h3>Mummy's Kitchen</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Burgers, American..</p>
-                    <p class="location">Trikuta Nagar</p>
-                </div>
-            </div>
-
-            <div class="hero-card search-item" data-search-text="Nanu Da Pawa Burgers American Trikuta Nagar">
-               <a href="items.html"> <img src="images/hotel1.avif" alt="hotel"></a>
-              <a href="items.html"> <h3>Nanu Da Pawa</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Burgers, American..</p>
-                    <p class="location">Trikuta Nagar</p>
-                </div>
-            </div>
-
-            <div class="hero-card search-item" data-search-text="Mummy's Food Burgers American Trikuta Nagar">
-               <a href="items.html"> <img src="images/hotel5.avif" alt="burger king"></a>
-               <a href="items.html"> <h3>Mummy's Food</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Burgers, American..</p>
-                    <p class="location">Trikuta Nagar</p>
-                </div>
-            </div>
-
-            <div class="hero-card search-item" data-search-text="Dad's Kitchen Burgers American Trikuta Nagar">
-              <a href="items.html"> <img src="images/hotel2.avif" alt="hotel"></a>
-              <a href="items.html"> <h3>Dad's Kitchen</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Burgers, American..</p>
-                    <p class="location">Trikuta Nagar</p>
-                </div>
-            </div>
-
-            <div class="hero-card search-item" data-search-text="Jackie's Dosa Burgers American Trikuta Nagar">
-              <a href="items.html"> <img src="images/hotel3.avif" alt="hotel"></a>
-              <a href="items.html">  <h3>Jackie's Dosa</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Burgers, American..</p>
-                    <p class="location">Trikuta Nagar</p>
-                </div>
-            </div>
-
-            <div class="hero-card search-item" data-search-text="South Special Burgers American Trikuta Nagar">
-              <a href="items.html"> <img src="images/hotel1.avif" alt="hotel"></a>
-               <a href="items.html"> <h3>South Special</h3></a>
-                <div class="card-inner">
-                    <div class="points">
-                        <p class="star"><img src="images/icons/star.svg">4.7</p>
-                        <p class="time"> 30-35 mins</p>
-                    </div>
-                    <p class="tag">Burgers, American..</p>
-                    <p class="location">Trikuta Nagar</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <footer>
-        <hr>
-        <div class="ftr-cont">
-
-            <div id="company">
-                <h3>Company</h3>
-                <ul>
-                    <li>About us</li>
-                    <li>Corporate</li>
-                    <li>Careers</li>
-                    <li>Team</li>
-                </ul>
-            </div>
-            <div id="about-us">
-                <h3>Contact us</h3>
-                <ul>
-                    <li>Support</li>
-                    <li>Partner with us</li>
-                    <li>Ride with us</li>
-                    <li>Press </li>
-                </ul>
-            </div>
-            <div id="legal">
-                <h3>Legal</h3>
-                <ul>
-                    <li>Terms & Conditions</li>
-                    <li>Cookie Policy</li>
-                    <li>Privacy Policy</li>
-                    <li>Investor Relations</li>
-                </ul>
-            </div>
-            <!-- <div id="legal">
-        <h3>Legal</h3>
-        <ul>
-            <li>Terms & Conditions</li>
-            <li>Cookie Policy</li>
-            <li>Privacy Policy</li>
-            <li>Investor Relations</li>
-        </ul>
-     </div> -->
-            <div id="socials">
-                <h3>Socials</h3>
-        <a href="https://www.linkedin.com/in/shahijahan-pedhar/" target="_blank"><img
-            src="images/social/linkedin.svg"></a>
-        <a href="https://www.instagram.com/codevory/" target="_blank"><img
-            src="images/social/instagram.svg"></a>
-        <a href="https://x.com/ShahijahanQ" target="_blank"><img src="images/social/x.svg"></a>
-                <div id="apps">
-            <a href="#"><img src="images/app-badges/app-android.png"></a>
-            <a href="#"><img src="images/app-badges/app-ios.png"></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    </div>
+    <!-- </div> -->
 
     <script src="https://kit.fontawesome.com/c37e01fc3f.js" crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
-
 </html>
