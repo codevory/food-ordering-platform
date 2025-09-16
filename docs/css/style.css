@@ -419,6 +419,15 @@ border-radius: 50%;
     display:none;
     margin:20px auto;
 }
+#outBtn{
+    border:none;
+    outline:none;
+    color:black;
+    font-size:14px;
+    box-shadow:none;
+    background-color:#ffffff;
+    font-weight:500;
+}
 
 
 /* NEW Youganda */
@@ -807,6 +816,17 @@ font-size:1.1rem;
     width:100px;
     height:auto;
 }
+@media(min-width:1400px){
+#outBtn{
+    border:none;
+    outline:none;
+    color:black;
+    font-size:18px;
+    box-shadow:none;
+    background-color:#ffffff;
+    font-weight:500;
+}
+}
 @media(min-width:768px){
 .toggle-menu{
     display:none;}
@@ -820,7 +840,28 @@ font-size:1.1rem;
     .small-menu{
     display:none;}
 }
+@media(min-width:1200px){
+    .popular-inner2{
+        grid-template-columns:repeat(auto-fit , minmax(280px , 1fr));
+        column-gap:40px;
+    }
+    .hero-inner2{
+        grid-template-columns:repeat(auto-fit , minmax(280px , 1fr));
+        column-gap:40px;
+    }
 
+}
+@media(max-width:1200px){
+    #outBtn{
+    border:none;
+    outline:none;
+    color:black;
+    font-size:12px;
+    box-shadow:none;
+    background-color:#ffffff;
+    font-weight:300;
+}
+}
 /* Mobile responsive section section 768*/
 @media(max-width:768px){body{
     box-sizing:border-box;
