@@ -505,7 +505,6 @@ localStorage.setItem('currentUser',JSON.stringify(userData))
 const username = document.querySelector('#username')
 const password = document.querySelector('#password')
 const logBtn = document.querySelector('#loginBtn')
-let allUsers = JSON.parse(localStorage.getItem('allUsers'));
 console.log(username.value.toLowerCase())
 let usern = save.username
 let passn = save.password
@@ -530,7 +529,7 @@ function login(e){
         lognTime : new Date().getTime()
      }
      localStorage.setItem('logedUser',JSON.stringify(logedUser))
-window.location.href = 'http://127.0.0.1:5500/projects/java/payment.html'
+window.location.href = ''
     }
 
     else{
@@ -545,12 +544,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const loged = JSON.parse(localStorage.getItem('logedUser'))
 
     if(loged){
-        openModalBtn.innerHTML = `<button id = "outBtn" >Logout </button> `
+        openModalBtn.innerHTML = `<button id = "outBtn" >Welcome ${save.username} </button> `
     }
     document.getElementById('outBtn').addEventListener('click',() => {
   localStorage.removeItem('logedUser')
   console.log('user logged out')
-    window.location.href = 'http://127.0.0.1:5500/projects/java/home.html';
+    window.location.href = '';
     })
   
 })
