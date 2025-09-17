@@ -1,5 +1,4 @@
-window.location.href='';
- const button = document.getElementById('button')
+const button = document.getElementById('button')
 let balance = document.querySelector('.balance')
 let walletSelector = document.getElementById('wallet-select')
 let biteWallet = document.getElementById('bite-wallet')
