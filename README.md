@@ -42,11 +42,14 @@ food-ordering-platform/
 
 ---
 
-## 📸 Screenshots
-
-![Home Banner](images/banner2.png)
-![Menu Example](images/biryani.avif)
-
+📸 Preview
+<div align="center" style="display: flex; flex-direction: column; gap: 20px; max-width: 800px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+<img src="images/preview-img/Food ordering home page.png" alt="Home page on desktop" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="images/preview-img/mobile-home-page.png" alt="Home page on mobile" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="images/preview-img/items-page.png" alt="Items page preview" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="images/preview-img/resturants-online.png" alt="Restaurants online section" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="images/preview-img/resturants-section.png" alt="Restaurants section preview" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+</div>
 ---
 
 ## 📦 Getting Started
