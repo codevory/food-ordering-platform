@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/checkout.css">
+</head>
+<body>
+
+    <div class="checkout-container">
+        <div class="checkout-header">
+            <h1>Review Your Order</h1>
+            </div>
+
+        <div class="checkout-body">
+            <h2 class="section-title">Items in Cart</h2>
+            
+            <span id="item-list" class="item-list">
+                <span>
+                        <ul class="item-name">Cart empty</ul>
+                        <!-- <img src="images/icons/delete.svg" alt="Cart"> -->
+                </span>
+    
+            </span>
+        </div>
+        
+        <div class="checkout-summary">
+             <div class="summary-line">
+                <span>Taxes & Fees</span>
+                <span>$<span id="tax"></span></span>
+            </div>
+            <div class="summary-line">
+                <span>Subtotal</span>
+                <span>$<span id="subtotal-price"></span></span>
+            </div>
+            <div class="summary-line">
+                <span>Discount</span>
+                 <span>$<span id="discount"></span> </span>
+            </div>
+            <!-- Coupon section -->
+            <div id="coupon-cont">
+                <label>Coupon Code<input type="text" id="couponInput"><button id="apply-coupon-btn">Apply</button></label>
+            </div>
+            <div id="coupon-message" class="message"></div>
+            <div class="summary-line total">
+                <span>Total</span>
+                <span>$<span id="total-price"></span> </span>
+            </div>
+        </div>
+
+        <button class="pay-now-btn"> Proceed to Payment</button>
+    </div>
+<script src="./js/checkout.js"></script>
+</body>
+</html>
