@@ -32,7 +32,8 @@ const inputAmount = document.getElementById('amount')
     // Save to localStorage
     localStorage.setItem('balance', JSON.stringify(newBalance))
     console.log("Balance updated and saved:", newBalance);
-    inputAmount.value = '' // Clear the input field after adding funds
+    inputAmount.value = '' // Clear the input field after adding 
+    window.location.reload();
   }
   else{
     balance.textContent = "0.00"
