@@ -20,6 +20,8 @@ let name = item.map(item => item.name)
 let quant = item.map(item => item.quantity)
 let price = item.map(item => item.price)
 
+
+
  balance.classList.add('active')
 walletSelector.addEventListener('change', function(event){
  if(event.target.value === "bite"){
