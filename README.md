@@ -44,8 +44,8 @@ food-ordering-platform/
 
 ## 📸 Screenshots
 
-![Home Banner](docs/images/banner2.png)
-![Menu Example](docs/images/biryani.avif)
+![Home Banner](images/banner2.png)
+![Menu Example](images/biryani.avif)
 
 ---
 
