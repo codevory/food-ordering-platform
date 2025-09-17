@@ -27,6 +27,7 @@ walletSelector.addEventListener('change', function(event){
  if(event.target.value === "bite"){
     balance.classList.add('active')
      orderMessage.textContent = ""
+     window.location.reload();
  }
  if(event.target.value === "gpay"){
     balance.classList.remove('active')
