@@ -20,23 +20,19 @@ Welcome to the Food Ordering Platform! This is a modern, responsive web applicat
 ```
 food-ordering-platform/
 │
-├── docs/
-│   ├── index.html         # Home page
-│   ├── items.html         # Menu & items
-│   ├── checkout.html      # Cart & checkout
-│   ├── payment.html       # Payment page
-│   ├── track.html         # Order tracking
-│   ├── wallet.html        # Wallet management
-│   ├── css/               # Stylesheets
-│   ├── js/                # JavaScript files
-│   ├── images/            # Images & icons
-│   └── html/              # HTML documentation
+├── index.html         # Home page
+├── items.html         # Menu & items
+├── checkout.html      # Cart & checkout
+├── payment.html       # Payment page
+├── track.html         # Order tracking
+├── wallet.html        # Wallet management
+├── css/               # Stylesheets
+├── js/                # JavaScript files
+├── images/            # Images & icons
 │
 ├── README.md              # Project overview
 └── ...
 ```
-
----
 
 ## 🛠️ Technologies Used
 
