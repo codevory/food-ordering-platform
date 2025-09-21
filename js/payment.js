@@ -126,21 +126,3 @@ window.location.href = "track.html"
       }
 
 });
-
-
-// window.onload = function(){
-// alert('Form Fields cleared')
-// form.reset()
-// } 
-
-// function saveOrder(){
-//   const oldOrder = localStorage.getItem('userOrders')
-//   const orders = oldOrder ? JSON.parse(oldOrder) : []
-
-//   orders.unshift(newOrder)
-//   localStorage.setItem('userOrders',JSON.stringify(orders))
-//    console.log("Order saved successfully!");
-//     alert("Your order has been placed! Order ID: " + orderData.orderId);
-// }
-
-
