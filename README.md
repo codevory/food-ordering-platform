@@ -83,7 +83,7 @@ JavaScript (ES6): For interactive features and dynamic content.
    ```powershell
    git clone https://github.com/codevory/food-ordering-platform.git
    ```
-2. **Open the `docs/` folder in your browser:**
+2. **Open the link in your browser:**
    - Start with `index.html` for the homepage.
 
 ---
