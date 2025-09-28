@@ -2,6 +2,7 @@ const button = document.getElementById('button')
 let balance = document.querySelector('.balance')
 let walletSelector = document.getElementById('wallet-select')
 let biteWallet = document.getElementById('bite-wallet')
+localStorage.setItem('balance',JSON.stringify(500))
 let walletBalance = Number(JSON.parse(localStorage.getItem('balance')))
 let gotDiscount = Number(JSON.parse(localStorage.getItem('discount')))
 let discount = document.getElementById('discount')
@@ -126,21 +127,3 @@ window.location.href = "track.html"
       }
 
 });
-
-
-// window.onload = function(){
-// alert('Form Fields cleared')
-// form.reset()
-// } 
-
-// function saveOrder(){
-//   const oldOrder = localStorage.getItem('userOrders')
-//   const orders = oldOrder ? JSON.parse(oldOrder) : []
-
-//   orders.unshift(newOrder)
-//   localStorage.setItem('userOrders',JSON.stringify(orders))
-//    console.log("Order saved successfully!");
-//     alert("Your order has been placed! Order ID: " + orderData.orderId);
-// }
-
-
