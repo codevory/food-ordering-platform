@@ -555,17 +555,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
 })
 
 // Mobile login system
-
-// Toggle Menu
-
-
-const menu = document.querySelector('.toggle-menu')
-const openBtn = document.querySelector('.menu-btn')
-const closeBtn = document.getElementById('close-btn')
-
-openBtn.addEventListener('click',function(){
-    menu.classList.add('active')
-})
-closeBtn.addEventListener('click',()=>{
-    menu.classList.remove('active')
-})

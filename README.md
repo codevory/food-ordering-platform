@@ -69,8 +69,7 @@ JavaScript (ES6): For interactive features and dynamic content.
 <br>
 
 <div align="center" style="display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 10px; max-width: 900px; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
-<!-- <img src="images/preview-img/Food ordering home page.png" alt="Home page on desktop" style="width: 30%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"> 
-<img src="images/preview-img/mobile-home-page.png" alt="Home page on mobile" style="width: 30%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"> -->
+<!-- <img src="images/preview-img/Food ordering home page.png" alt="Home page on desktop" style="width: 30%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"> --> 
 <img src="images/preview-img/items-page.png" alt="Items page preview" style="width: 30%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 <img src="images/preview-img/resturants-online.png" alt="Restaurants online section" style="width: 30%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 <img src="images/preview-img/resturants-section.png" alt="Restaurants section preview" style="width: 30%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
@@ -84,7 +83,7 @@ JavaScript (ES6): For interactive features and dynamic content.
    ```powershell
    git clone https://github.com/codevory/food-ordering-platform.git
    ```
-2. **Open the `docs/` folder in your browser:**
+2. **Open the link in your browser:**
    - Start with `index.html` for the homepage.
 
 ---
