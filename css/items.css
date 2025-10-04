@@ -22,7 +22,7 @@ body{
     justify-content:space-between;
     align-items:center;
     background-color:#ffffff;
-    box-shadow:3px 12px 26px 5px rgba(0, 0, 0 ,0.5);
+    box-shadow:3px 12px 26px 5px rgba(0, 0, 0 ,0.1);
 }
 #head-left img{
     width:130px;
@@ -758,7 +758,7 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
     }
     #header{
         height:80px;
-            box-shadow:3px 12px 20px 5px rgba(255, 0, 0, 0.2);
+            box-shadow:3px 12px 20px 5px rgba(255, 0, 0, 0.1);
 
     }
     #head-right ul{
